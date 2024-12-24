@@ -9,7 +9,7 @@ body {
 } /*Set margin to 0 so that the navigation bar can fill the rest of the screen*/
 
 .header {
-    margin: 0px 30px;
+    padding: 0px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,6 +24,7 @@ body {
     background color set to specifications;
     box-shadow to match wit the wireframe;
     Z-index to make it mask all over the screen*/
+
 
 #nameHeader {
     font-size: 1em;
