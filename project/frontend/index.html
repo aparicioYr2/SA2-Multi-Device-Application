@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Overwatch Cast</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="header">
+        <h1 id="nameHeader">Overwatch Cast</h1>
+        <div class="headerNav">
+            <a href="javascript:void(0);" onclick="showPage('homepage')">Home</a>
+            <a href="">About</a>
+            <a href="">Characters</a>
+            <button type="button" onclick="showPage('signup')">User</button>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Sign Up Page -->
+    <div class="page" id="signup">
+        <div class="signUpLogin">
+            <div class="contents">
+                <div class="leftSide">
+                    <p id="welcomeText">WELCOME TO OVERWATCH</p>
+                    <h1 id="signUp"><i>Sign Up</i></h1>
+                    <br>
+                    <form>
+                        <div>
+                            <label for="signup-email">Email</label>
+                            <br>
+                            <input type="email" id="signup-email" name="email" required>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="signup-name">Username</label>
+                            <br>
+                            <input type="text" id="signup-username" name="username" required>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="signup-password">Password</label>
+                            <br>
+                            <input type="password" id="signup-password" name="password" required>
+                        </div>
+                    </form>
+                    <br><br>
+                    <button type="button" id="signup-btn">Create Account</button>
+                    <br>
+                    <a href="javascript:void(0);" onclick="showPage('login')"><u>Already have an account?</u></a>
+                    <p id="signup-error" class="error"></p>
+                </div>
+                <div class="rightSide">
+                    <img src="SignUpImage.png" alt="Signup Image" class="signUpLoginImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Login Page -->
+    <div class="page" id="login">
+        <div class="signUpLogin">
+            <div class="contents">
+                <div class="leftSide">
+                    <p id="welcomeText">WELCOME TO OVERWATCH</p>
+                    <h1 id="signUp"><i>Login</i></h1>
+                    <br>
+                    <form>
+                        <div>
+                            <label for="login-email">Email</label>
+                            <br>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="login-password">Password</label>
+                            <br>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                    </form>
+                    <a>Forgot password?</a>
+                    <br><br><br>
+                    <button type="button" id="login-btn">Login</button>
+                    <br>
+                    <a href="javascript:void(0);" onclick="showPage('signup')"><u>Don't have an account yet?</u></a>
+                    <p id="login-error" class="error"></p>
+                </div>
+                <div class="rightSide">
+                    <img src="SignUpImage.png" alt="Signup Image" class="signUpLoginImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Homepage -->
+    <div class="page" id="homepage">
+        <!-- Hero section -->
+        <section class="sectionHero">
+            <div class="JunoHeroContents">
+                <p id="NewHero">New hero!</p>
+                <h1><i>JUNO</i></h1>
+                <p>A Martian. Juno uses her space-age technology to solve any problem that enters her orbit.</p>
+                <button type="button">Learn more</button>
+            </div>
+            <div class="JunoHeroImage">
+                <div class="gradient"></div>
+                <img src="JunoHero.jpg" alt="Image of Juno" id="JunoHeroImage">
+        </section>
+        
+        <!-- Passives section -->
+        <section class="sectionPassives">
+            <h1 class="sectionHeader"><i>Passives</i></h1>
+            <div class="passiveContainer">
+                <div class="passiveOne">
+                    <div class="passiveContent">
+                        <img src="PassivesHealthIcon.png" alt="Health icon" class="PassiveIcons">
+                        <div class="passiveText">
+                            <h2>Role: Support</h2>
+                            <p>Begin regenerating health more quickly.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="passiveTwo">
+                    <div class="passiveContent">
+                        <img src="PassivesOverbootsIcon.png" alt="Martian Overboots icon" class="PassiveIcons">
+                        <div class="passiveText">
+                            <h2>Martian Overboots</h2>
+                            <p>While airborne, press Jump to double jump and hold Jump to hover.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Abilities section -->
+        <section class="sectionAbilities">
+            <h1 class="sectionHeader"><i>Abilities</i></h1>
+            
+            <div class="abilities">
+                <div class="abilityRow">
+                    <div class="ability">
+                        <img src="AbilitiesGlideboostIcon.png" alt="Ability icon for Glide Boost" class="AbilityIcons">
+                        <div class="abilityDetails">
+                            <h2>Glide Boost</h2>
+                            <p>Glide horizontally with increased movement speed.
+                                <br><br>
+                                <b>Duration:</b> <u>4 seconds</u>
+                                <br>
+                                <b>Movement speed bonus:</b>
+                                <br>
+                                <u>+390%</u> (dash)
+                                <br>
+                                <u>+50%</u> (lingering)
+                            </p>
+                            <h2>CD: 6 seconds</h2>
+                        </div>
+                    </div>
+            
+                    <div class="ability">
+                        <img src="AbilitiesHyperringIcon.png" alt="Ability icon for Hyper Ring" class="AbilityIcons">
+                        <div class="abilityDetails">
+                            <h2>Hyper Ring</h2>
+                            <p>Deploy a ring that increases movement speed of allies that pass through it.
+                                <br><br>
+                                <b>Duration:</b> <u>6 seconds</u> (ring)
+                                <br>
+                                <u>3 seconds</u> (speed)
+                                <br>
+                                <b>Movement speed bonus:</b>
+                                <br>
+                                <u>+50%</u>
+                            </p>
+                            <h2>CD: 14 seconds</h2>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="abilityRow">
+                    <div class="ability">
+                        <img src="AbilitiesPulsartorpedeosIcon.png" alt="Ability icon for Pulsar Torpedoes" class="AbilityIcons">
+                        <div class="abilityDetails">
+                            <h2>Pulsar Torpedoes</h2>
+                            <p>Press Secondary Fire to lock on, then Primary Fire to fire homing projectiles. Heals allies over time and damages enemies.
+                                <br><br>
+                                <b>Damage:</b> <u>85</u>
+                                <br>
+                                <b>Healing:</b> <u>85</u> (direct)
+                                <br>
+                                <u>50</u> (over time)
+                            </p>
+                            <h2>CD: 10 seconds</h2>
+                        </div>
+                    </div>
+            
+                    <div class="ability">
+                        <img src="AbilitiesOrbitalrayIcon.png" alt="Ability icon for Orbital Ray" class="AbilityIcons">
+                        <div class="abilityDetails">
+                            <h2>Orbital Ray</h2>
+                            <p>Call down a ray that travels forward, healing allies and increasing their damage.
+                                <br><br>
+                                <b>Duration:</b> <u>10 seconds</u>
+                                <br>
+                                <b>Healing:</b> <u>85 per second</u>
+                                <br>
+                                <b>DMG boost:</b> <u>35%+ dealt</u>
+                            </p>
+                            <h2>ULT: 2850pts</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    
+        <!-- Backstory section -->
+        <section class="sectionBackstory">
+            <h1 class="sectionHeader"><i>Backstory</i></h1>
+            <p id="backstory">Juno Teo Minh, the first human born on Mars, grew up in a scientific colony working on Project Red Promise. 
+                Despite being isolated, she was curious and adventurous, often venturing outside in a makeshift suit. 
+                With the support of the colony, she became a skilled navigator, embodying the hope of humanity’s future on Mars.
+                <br><br>
+                As Mars faced dangerous dust storms from the terraforming project, the Red Promise team realized they were running out of time. 
+                With no help from Earth, they decided to send Juno to seek assistance. After an emotional farewell, she left Mars with climate data, 
+                overcoming technical malfunctions along the way.
+                <br><br>
+                On Earth, Juno was overwhelmed by new cultures but remained determined to save her family. She struggled to adjust but found support 
+                from Mei, a climatologist who knew her mother. Amidst Earth's conflict, Juno stayed focused on her mission, continuing to search for 
+                a way to help Mars.</p>
+        </section>
+    
+        <!-- Achievements section -->
+        <section class="sectionAchievements">
+            <h1 class="sectionHeader"><i>Achievements</i></h1>
+            <div class="achievementContainer">
+                <div class="achievementOne">
+                    <div class="achievementContent">
+                        <img src="Spray_Juno_Cute.png" alt="Juno cute spray" class="AchievementSprays">
+                        <div class="achievementText">
+                            <h2>Cute spray</h2>
+                            <p>Hit 6 targets with a single use of Pulsar Torpedoes in Quick or Competitive Play.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="achievementTwo">
+                    <div class="achievementContent">
+                        <img src="Spray_Juno_Pixel.png" alt="Juno cute spray" class="AchievementSprays">
+                        <div class="achievementText">
+                            <h2>Pixel spray</h2>
+                            <p>Get 4 kills or assists with a single use of Orbital Ray in Quick or Competitive Play.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Gallery section -->
+        <section class="sectionGallery">
+            <h1 class="sectionHeader"><i>Gallery</i></h1>
+                <div class="galleryImages">
+                    <img src="GalleryOne.png" alt="Juno concept art 1" class="galleryImage">
+                    <div class="rightImages">
+                        <img src="GalleryTwo.png" alt="Juno concept art 2" class="galleryImage">
+                        <img src="GalleryThree.png" alt="Juno concept art 3" class="galleryImage">
+                    </div>
+                </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+    <!--JavaScript logic-->
+    <script>
+        // Original Page Show Logic
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.style.display = 'none'); // Hide all pages
+            document.getElementById(pageId).style.display = 'block'; // Show selected page
+        }
+
+        // Show signup page initially
+        showPage('signup');
+
+        // Signup Functionality
+        document.getElementById('signup-btn').addEventListener('click', async () => {
+            const email = document.getElementById('signup-email').value.trim();
+            const name = document.getElementById('signup-username').value.trim();
+            const password = document.getElementById('signup-password').value.trim();
+            const error = document.getElementById('signup-error');
+
+            if (name && email && password) {
+                try {
+                    const response = await fetch('http://localhost:4000/api/user/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ name, email, password }),
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        alert('Sign Up Successful! Redirecting to Login page...');
+                        error.style.display = 'none';
+                        showPage('login');
+                    } else {
+                        error.textContent = data.message || 'Sign Up Failed!';
+                        error.style.display = 'block';
+                    }
+                } catch (err) {
+                    error.textContent = 'An error occurred. Please try again later.';
+                    error.style.display = 'block';
+                }
+            } else {
+                error.textContent = 'All fields are required!';
+                error.style.display = 'block';
+            }
+        });
+
+
+        // Login Functionality
+        document.getElementById('login-btn').addEventListener('click', async () => {
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+            const error = document.getElementById('login-error');
+
+            console.log('Email:', email); // Debug: Check if email is being accessed
+            console.log('Password:', password); // Debug: Check if password is being accessed
+
+            if (email && password) {
+                try {
+                    const response = await fetch('http://localhost:4000/api/user/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ email, password}),
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        alert(`Welcome back, ${data.user.name}!`);
+                        error.style.display = 'none';
+                        localStorage.setItem('user', JSON.stringify(data));
+
+                        // Redirect to the homepage
+                        showPage('homepage');
+                    } else {
+                        error.textContent = data.message || 'Invalid email or password.';
+                        error.style.display = 'block';
+                    }
+                } catch (err) {
+                    error.textContent = 'An error occurred. Please try again later.';
+                    error.style.display = 'block';
+                }
+            } else {
+                error.textContent = 'All fields are required!';
+                error.style.display = 'block';
+            }
+        });
+
+
+        // JS Styling 
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all text, email, and password input elements
+            const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]');
+    
+            // Iterate through each input and apply the styles
+            inputs.forEach(input => {
+                input.style.width = '600px';
+                input.style.height = '35px';
+                input.style.backgroundColor = '#15171E';
+                input.style.color = 'white';
+                input.style.border = 'solid #999999';
+                input.style.borderWidth = '0.3px';
+                input.style.boxShadow = 'inset -4px -4px 6px rgba(0, 0, 0, 0.2)';
+                input.style.marginTop = '10px';
+                input.style.marginBottom = '5px';
+                input.style.fontSize = '20px';
+                input.style.fontWeight = '300';
+                input.style.paddingLeft = '10px';
+            });
+
+            // Get all button elements
+            const buttons = document.querySelectorAll('button');
+            
+            // Iterate through each button and apply the styles
+            buttons.forEach(button => {
+                // Button default styles
+                button.style.backgroundColor = '#148eff';
+                button.style.color = 'white';
+                button.style.padding = '10px 16px';
+                button.style.border = 'none';
+                button.style.borderRadius = '5px';
+                button.style.cursor = 'pointer'; // To show the clickable cursor
+                
+                // Button hover effect - dims when hovered
+                button.addEventListener('mouseover', function() {
+                    button.style.backgroundColor = '#107acc'; // Dim color on hover
+                });
+
+                // Revert to default color when the mouse leaves
+                button.addEventListener('mouseout', function() {
+                    button.style.backgroundColor = '#148eff'; // Original color
+                });
+            });
+        });
+    </script>
+</body>
+</html>

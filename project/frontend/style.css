@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+/* =================================================================*/
+/* =================================================================*/
+/* =================================================================*/
+/* GLOBAL */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    background-color: #15171e;
+    font-weight: 300;
+} /* Set margin to 0 so that the navigation bar can fill the rest of the screen */
+
+h1 {
+    font-weight: 900;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightgray; 
+}
+
+button {
+    padding: 10px 16px;
+    background-color: #148eff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+} /* Padding adjustments set the button header to the right size */
+
+/* =================================================================*/
+/* =================================================================*/
+/* =================================================================*/
+/* HEADER */
+
+.header {
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #15171e;
+    z-index: 2;
+} /* Display and Justify-content to spread out elements to specifications;
+    position set to sticky so it follows the viewport when scrolling down the page;
+    width set to 100% to fill the rest of the screen;
+    padding to give space between the elements to the background color;
+    background color set for default desktop dimensions;
+    box-shadow to match with the wireframe;
+    Z-index to make it mask all over the screen */
+
+#nameHeader {
+    font-size: 1em;
+    padding: 40px;
+    margin: 0px;
+} /* Set heading size for default desktop dimensions */
+
+.headerNav {
+    padding: 40px;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+} /* Gap adjustments for default desktop dimensions */
+
+
+
+/* =================================================================*/
+/* =================================================================*/
+/* =================================================================*/
+/* SIGN UP LOGIN */
+
+.signUpLogin {
+    width: 1400px;
+    margin: auto; 
+    background-color: #23262c;
+    border-radius: 10px;
+} /* Set element width for default desktop dimensions */
+
+.contents {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+} /* Display flex to make the image appear on the right side */
+
+.leftSide {
+    padding: 40px;
+    flex: 1;
+    padding-right: 20px;
+} /* Padding around the left side element to create space within it;
+    Flexbox property to make this element flexible and take up available space;
+    Right padding to add spacing between the content and the edge */
+
+.rightSide {
+    flex-shrink: 0;
+    padding-left: 20px;
+} /* Prevents this element from shrinking when the container is resized;
+    Left padding to provide space between the content and the edge */
+
+.signUpLoginImage {
+    width: 714px;
+    height: auto;
+} /* Fixed width for the image;
+    Auto height to maintain the image’s aspect ratio */
+
+#welcomeText {
+    font-size: 27px;
+    margin: 0px;
+} /* Sets the font size for the welcome text;
+    Removes any default margin around the text */
+
+label {
+    font-size: 30px;
+} /* Sets the font size for label elements */
+
+#signup-btn, #login-btn {
+    border-radius: 0px;
+    width: 612px;
+    font-weight: 700;
+    font-size: 25px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    margin-bottom: 10px;
+} /* Border radius set to 0px for sharp corners;
+    Width set to 612px for the buttons;
+    Font weight set to bold for a heavier text style;
+    Font size set to 25px for button text size;
+    Padding added to the top and bottom with !important to override other styles;
+    Margin at the bottom of 10px to add space below buttons */
+
+.squareOne, .squareTwo, .squareThree {
+    border-radius: 0px;
+    width: 58.8px;
+    height: 58.8px;
+    color: #148eff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+} /* Border radius set to 0px for sharp corners;
+    Width and height set to 58.8px for square dimensions;
+    Text color set to blue;
+    Padding at the top and bottom to add space inside the squares;
+    Margin at the bottom of 10px to add space below the squares */
+
+#signUp {
+    font-size: 110px;
+    font-weight: 900;
+    margin: 0px;
+} /* Font size set to 110px for large text;
+    Font weight set to 900 for extra bold text;
+    Margin set to 0px to remove any default margin around the text */
+
+
+#signupLink {
+    color: #148eff;
+} /* Sets the text color of the signup link to blue*/
+
+#loginLink {
+    color: #148eff;
+    font-size: 20px;
+    font-weight: 700;
+} /* Sets the text color of the login link to blue;
+    Font size set to 20px for login link text;
+    Font weight set to bold (700) for the login link text */
+
+.hidden {
+    display: none;
+} /* Hides elements with the class 'hidden' by setting display to none */
+
+
+/* =================================================================*/
+/* =================================================================*/
+/* =================================================================*/
+/* HOMEPAGE */
+
+.JunoHeroImage {
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    pointer-events: none; 
+} /* Makes sure that the gradient doesn't interfere with any interaction */
+
+#JunoHeroImage {
+    width: 100%;
+    display: block; 
+} /* Makes sure that image doesn't have extra space below */
+
+.JunoHeroContents {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    z-index: 1;
+} /* Position set to absolute to position the element relative to its closest positioned ancestor;
+    Positioned at the center of the viewport using top 50% and left 30% with transform to offset the element;
+    Text color set to white;
+    Text alignment set to left for the content;
+    z-index set to 1 to ensure the element appears above other content */
+
+.JunoHeroContents p {
+    font-size: 1.2rem;
+} /* Sets the font size for paragraph elements within .JunoHeroContents to 1.2rem */
+
+.JunoHeroContents h1 {
+    font-size: 12rem;
+    margin: 0.5rem 0;
+    color: transparent;
+    background: linear-gradient(to bottom, #FF75FC, #3A3266); 
+    -webkit-background-clip: text;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    background-clip: text; 
+    font-weight: 900;
+} /* Sets font size for the h1 to 12rem for large text;
+    Margin added to the top and bottom of 0.5rem;
+    Color set to transparent so the gradient shows through;
+    Background set to a linear gradient from light purple to dark purple;
+    Uses webkit-specific styles to apply the gradient to the text and give it a white text stroke to fit the wireframe;
+    Background-clip applied to make the gradient only affect the text;
+    Font weight set to 900 for extra bold text */
+
+.JunoHeroContents button {
+    font-size: 1rem;
+} /* Sets the font size of the button inside .JunoHeroContents to 1rem */
+
+#NewHero {
+    font-size: 2rem;
+    margin: 0px;
+    color: #FFF348;
+} /* Sets font size for #NewHero to 2rem for emphasis;
+    Removes default margin around the text;
+    Sets text color to yellow */
+
+/* =================================================================*/
+.sectionHeader {
+    font-size: 2.5rem;
+} /* Sets the font size for section headers to 2.5rem for larger text */
+
+.sectionPassives, .sectionAbilities, .sectionBackstory, .sectionAchievements, .sectionGallery {
+    margin: 70px;
+} /* Adds a margin of 70px around each of these section elements for spacing */
+/* =================================================================*/
+.PassiveIcons {
+    width: 141px;
+    padding: 30px;
+    background-color: #FF75FC;
+    border-radius: 100%;
+} /* Sets the width of the passive icons to 141px;
+    Padding of 30px around the content inside the icon;
+    Background color set to a fuschia colour;
+    Border radius set to 100% to create circular icons */
+
+.passiveContainer {
+    column-count: 2;
+} /* Divides the content into two columns within the passive container */
+
+.passiveContainer {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    padding: 20px;
+} /* Uses flexbox layout to distribute space between the children;
+    Ensures the container spans the full width of its parent;
+    Padding added to create space between the container’s edges and its content */
+
+.passiveOne, .passiveTwo {
+    flex: 0 0 48%;
+    box-sizing: border-box; 
+    column-count: 2;
+    background-color: #44356D;
+    border-radius: 130px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+} /* Each div within passiveOne and passiveTwo takes up 48% of the container width;
+    Box-sizing set to border-box so that padding and borders do not affect the width;
+    Divs are arranged into two columns;
+    Background color set to dark purple;
+    Border radius set to 130px for rounded corners;
+    Padding added for spacing within the divs;
+    Box shadow added for a subtle 3D effect */
+
+.passiveText {
+    position: relative;
+    transform: translate(-100px, 10px); 
+} /* Positions the text relative to its normal position;
+    Translates the text 100px to the left and 10px down */
+
+.passiveText h2 {
+    font-size: 3rem;
+    margin: 0px;
+} /* Sets the font size of h2 elements inside .passiveText to 3rem for prominence;
+    Removes default margin around the h2 */
+
+/* =================================================================*/
+.abilities {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+} /* Uses flexbox layout with a column direction for vertical stacking;
+    Gap between elements increased to 30px for better spacing */
+
+.abilityRow {
+    display: flex;
+    gap: 30px; 
+    justify-content: center;
+} /* Uses flexbox layout to align items in a row;
+    Increased gap between each item to 30px for more spacing;
+    Justifies content to the center of the row */
+
+.ability {
+    display: flex;
+    gap: 22.5px;
+    background-color: #44356D;
+    padding: 30px; 
+    border-radius: 15px; 
+    width: 50%; 
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.4);
+} /* Uses flexbox layout to align the content inside the ability container;
+    Gap between image and text increased to 22.5px;
+    Background color set to dark purple;
+    Padding increased for more space inside the card;
+    Border radius set to 15px for slightly rounder corners;
+    Card width set to 50% of the container for a larger appearance;
+    Box shadow added for a slightly larger depth effect */
+
+.AbilityIcons {
+    width: 250px; /* Increased image size */
+    height: 250px;
+    object-fit: contain;
+    background-color: #FF75FC;
+    border-radius: 15px; /* Adjusted for larger dimensions */
+} /* Sets the width and height of the ability icon to 250px for a larger image;
+    Ensures the image maintains its aspect ratio with object-fit: contain;
+    Background color set to light purple (#FF75FC);
+    Border radius set to 15px to match the card’s rounded corners */
+
+.abilityDetails {
+    color: white;
+} /* Sets the text color of ability details to white */
+
+
+.abilityDetails h2 {
+    margin: 0;
+    color: #f1f1f1;
+    font-size: 27px;
+} /* Removes default margin around h2 for better alignment;
+    Font size increased to 27px for better prominence */
+
+.abilityDetails p {
+    margin: 0;
+    font-size: 21px; 
+    color: #d1d1d1;
+    line-height: 1.8; 
+} /* Removes default margin around paragraphs for better alignment;
+    Font size increased to 21px for better readability;
+    Increased line height to 1.8 for better readability and space between lines */
+
+/* =================================================================*/
+.sectionBackstory {
+    background-color: #3A3266;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+} /* Sets the background color to dark purple;
+    Adds padding to the top, bottom, left, and right for internal spacing;
+    Border radius set to 10px for rounded corners */
+
+#backstory {
+    font-size: 2rem;
+} /* Sets the font size for #backstory text to 2rem for emphasis */
+
+/* =================================================================*/
+.AchievementSprays {
+    width: 250px;
+    padding: 10px;
+    background-color: #FF75FC;
+} /* Sets the width of the achievement sprays to 250px;
+    Adds 10px of padding inside the element;
+    Background color set to light purple */
+
+.achievementContainer {
+    column-count: 2;
+} /* Divides the content into two columns within the achievement container */
+
+.achievementContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    padding: 20px; 
+} /* Uses flexbox layout to distribute space between children;
+    Ensures the container spans the full width of its parent;
+    Padding added for internal spacing between content and container edges */
+
+.achievementOne, .achievementTwo {
+    flex: 0 0 48%;
+    box-sizing: border-box; 
+    column-count: 2;
+    background-color: #3A3266;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+} /* Each div within achievementOne and achievementTwo takes up 48% of the container width;
+    Box-sizing set to border-box so padding and borders do not affect width;
+    Column count set to 2 for better content organization;
+    Background color set to dark purple;
+    Padding of 20px for internal space;
+    Box shadow added for subtle depth effect */
+
+.achievementText h2 {
+    font-size: 3rem;
+    margin: 0px;
+} /* Sets the font size of h2 elements inside achievementText to 3rem for prominence;
+    Removes default margin around the h2 */
+/* =================================================================*/
+
+.galleryImages {
+    column-count: 2;
+} /* Divides the content into two columns within the gallery */
+
+.galleryImage {
+    width: 100%;
+} /* Sets the width of each gallery image to 100% of its container */
+
+.rightImages {
+    width: 103%;
+} /* Sets the width of rightImages to 103% to slightly overflow the container */
+
+/* =================================================================*/
+
+
+
+/* =================================================================*/
+/* =================================================================*/
+
+@media screen and (max-width: 1260px){
+    /*Helps to transition from desktop to tablet screen */
+
+    .JunoHeroContents {
+        position: absolute;
+        transform: translate(-40%, -50%);
+    }
+
+    .passiveText {
+        position: relative;
+        transform: translate(-20px, 10px);
+    }
+
+    .PassiveIcons {
+        padding: 30px;
+    }
+}
+/* =================================================================*/
+/* Media queries*/
+
+@media screen and (max-width: 1080px) {
+    /* Styles for tablets and smaller devices */
+
+    .JunoHeroContents {
+        position: absolute;
+        transform: translate(-30%, -50%);
+    }
+
+    .JunoHeroContents p {
+        font-size: 1.2rem;
+    }
+    
+    .JunoHeroContents h1 {
+        font-size: 8rem;
+        -webkit-text-stroke-width: 4px;
+    }
+    
+    #NewHero {
+        font-size: 1.5rem;
+    }
+
+    .sectionPassives, .sectionAbilities, .sectionBackstory, .sectionAchievements, .sectionGallery {
+        margin: 50px;
+    }
+
+    .PassiveIcons {
+        width: 100px;
+        padding: 30px;
+        background-color: #FF75FC;
+    }
+    
+    .passiveContainer {
+        column-count: 1;
+    }
+    
+    .passiveContainer {
+        display: block;
+    }
+
+    .passiveOne, .passiveTwo {
+        margin-bottom: 20px;
+    }
+
+    .abilities {
+        display: block;
+    }
+    
+    .abilityRow {
+        display: flex;
+        gap: 30px; 
+        justify-content: center;
+    }
+    
+    .ability {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .achievementContainer {
+        column-count: 1;
+    }
+
+    .achievementContainer {
+        display: block;
+    }
+
+    .achievementOne, .achievementTwo {
+        margin-bottom: 20px;
+    }
+}
+/* =================================================================*/
+
+@media screen and (max-width: 900px) {
+    /*Helps to transition from tablet to phone screen */
+    
+    .JunoHeroContents {
+        position: absolute;
+        transform: translate(-30%, -65%);
+    }
+}
+
+/* =================================================================*/
+
+@media screen and (max-width: 720px) {
+    /* Styles for mobile phones */
+
+    .JunoHeroContents {
+        position: absolute;
+        transform: translate(-30%, -90%);
+    }
+
+    .JunoHeroContents p {
+        font-size: 1rem;
+    }
+    
+    .JunoHeroContents h1 {
+        font-size: 6rem;
+        -webkit-text-stroke-width: 3px;
+    }
+    
+    #NewHero {
+        font-size: 1.2rem;
+    }
+
+    .sectionPassives, .sectionAbilities, .sectionBackstory, .sectionAchievements, .sectionGallery {
+        margin: 20px;
+    }
+
+    .PassiveIcons {
+        width: 100px;
+        padding: 30px;
+        background-color: #FF75FC;
+        border-radius: 100%;
+    }
+    
+    .passiveContainer {
+        column-count: 1;
+    }
+    
+    .passiveContainer {
+        display: block;
+    }
+
+    .passiveOne, .passiveTwo {
+        margin-bottom: 20px;
+    }
+
+    .abilities {
+        display: block;
+    }
+    
+    .abilityRow {
+        display: block;
+    }
+    
+    .ability {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .achievementContainer {
+        column-count: 1;
+    }
+
+    .achievementContainer {
+        display: block;
+    }
+
+    .achievementOne, .achievementTwo {
+        margin-bottom: 20px;
+    }
+    
+    .achievementText {
+        position: static;
+       
+    }
+    
+    .achievementText h2 {
+        font-size: 3rem;
+        margin: 0px;
+    }
+
+    .galleryImages {
+        column-count: 1;
+    }
+    
+    .rightImages {
+        width: 100%;
+    }
+}
